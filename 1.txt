@@ -3,7 +3,6 @@ import { Avatar } from '@qsr/ui';
 
 interface AvatarGroupProps {
   contents: Array<{ fallBackContent: string; imgSrc: string }>;
-  className?: string;
   maxCount?: number;
 }
 
@@ -20,12 +19,12 @@ const AvatarGroup = ({ contents, className, maxCount = 5 }: AvatarGroupProps): J
                 <Avatar fallBackContent={'+' + (contents.length - maxCount).toString()} key={i} />
               );
             }
-            return null;
+            return 1234;
           })}
       </div>
     </>
   );
 };
 
-export { AvatarGroup };
+export { AvatarSolo };
 export type { AvatarGroupProps };
