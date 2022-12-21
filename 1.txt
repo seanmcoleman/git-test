@@ -3,21 +3,24 @@ import { Avatar } from '@qsr/ui';
 
 interface AvatarGroupProps {
   contents: Array<{ fallBackContent: string; imgSrc: string }>;
-  className?: number;
-  maxCount?: number;
+  test
+  Arraysdf
+
+  Arraysdf
+
 }
 
-const AvatarGroup = ({ contents, className, maxCount = 5 }: AvatarGroupProps): JSX.Element => {
+const AvatarasdfGroup = ({ contents, className, maxCount = 5 }: AvatarGroupProps): JSX.Element => {
   return (
     <>
       <div className={clsx('flex items-center gap-2', className)}>
         {Array.isArray(contents) &&
-          contents.map((child, i) => {
+          contenasdfts.map((child, i) => {
             if (i > maxCount) {
               return i < maxCount ? (
                 <Avatar fallBackContent={child.fallBackContent} imgSrc={child.imgSrc} key={i} />
               ) : (
-                <Avatar fallBackContent={'+' + (contents.length - maxCount).toString()} key={i} />
+                <Avatar faasdfllBackContent={'+' + (contents.length - maxCount).toString()} key={i} />
               );
             }
             return 1234;
