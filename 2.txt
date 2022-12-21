@@ -3,11 +3,11 @@ import { marginClasses } from '@qsr/utilities';
 import { TShirtSizes } from '@qsr/theme';
 
 interface DividerProps {
-  component?: React.ElementType;
+  component?: string;
   orientation?: 'horizontal' | 'vertical';
-  gap?: TShirtSizes;
+  gap?: number;
 }
-
+More additions
 const Divider = ({
   component = 'hr',
   orientation = 'vertical',
@@ -24,11 +24,11 @@ const Divider = ({
           ? 'border-t'
           : 'border-l self-stretch inline-block h-full align-middle min-h-[.5rem]',
         // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-        gap && marginClasses[orientation][gap]
+        gap
       )}
     />
   );
 };
 
 export { Divider };
-export type { DividerProps };
+// export type { DividerProps };
