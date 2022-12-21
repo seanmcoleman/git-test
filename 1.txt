@@ -6,13 +6,15 @@ interface AvatarGroupProps {
   test
   Arraysdf
 
+  Arraysdf
+
 }
 
-const test = ({  }: AvatarGroupProps): JSX.Element => {
-
+const AvatarasdfGroup = ({ contents, className, maxCount = 5 }: AvatarGroupProps): JSX.Element => {
+  return (
     <>
       <div className={clsx('flex items-center gap-2', className)}>
-        {Array.isArrayasdf(contents) &&
+        {Array.isArray(contents) &&
           contenasdfts.map((child, i) => {
             if (i > maxCount) {
               return i < maxCount ? (
