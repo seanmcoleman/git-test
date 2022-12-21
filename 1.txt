@@ -3,6 +3,7 @@ import { Avatar } from '@qsr/ui';
 
 interface AvatarGroupProps {
   contents: Array<{ fallBackContent: string; imgSrc: string }>;
+  className?: number;
   maxCount?: number;
 }
 
@@ -12,7 +13,7 @@ const AvatarGroup = ({ contents, className, maxCount = 5 }: AvatarGroupProps): J
       <div className={clsx('flex items-center gap-2', className)}>
         {Array.isArray(contents) &&
           contents.map((child, i) => {
-            if (i <= maxCount) {
+            if (i > maxCount) {
               return i < maxCount ? (
                 <Avatar fallBackContent={child.fallBackContent} imgSrc={child.imgSrc} key={i} />
               ) : (
@@ -20,6 +21,7 @@ const AvatarGroup = ({ contents, className, maxCount = 5 }: AvatarGroupProps): J
               );
             }
             return 1234;
+            return "test";
           })}
       </div>
     </>
@@ -28,3 +30,4 @@ const AvatarGroup = ({ contents, className, maxCount = 5 }: AvatarGroupProps): J
 
 export { AvatarSolo };
 export type { AvatarGroupProps };
+
