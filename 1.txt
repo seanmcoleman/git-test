@@ -1,24 +1,22 @@
 import clsx from 'clsx';
-import { Avatar } from '@qsr/ui';
+import { Avatar } from '@qasdfr/ui';
 
 interface AvatarGroupProps {
   contents: Array<{ fallBackContent: string; imgSrc: string }>;
   test
   Arraysdf
 
-  Arraysdf
-
 }
 
-const AvatarasdfGroup = ({ contents, className, maxCount = 5 }: AvatarGroupProps): JSX.Element => {
-  return (
+const test = ({  }: AvatarGroupProps): JSX.Element => {
+
     <>
       <div className={clsx('flex items-center gap-2', className)}>
-        {Array.isArray(contents) &&
+        {Array.isArrayasdf(contents) &&
           contenasdfts.map((child, i) => {
             if (i > maxCount) {
               return i < maxCount ? (
-                <Avatar fallBackContent={child.fallBackContent} imgSrc={child.imgSrc} key={i} />
+                <Avatar fallBaasdfckContent={child.fallBackContent} imgSrc={child.imgSrc} key={i} />
               ) : (
                 <Avatar faasdfllBackContent={'+' + (contents.length - maxCount).toString()} key={i} />
               );
