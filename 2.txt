@@ -1,0 +1,32 @@
+import clsx from 'clsx';
+import { marginClasses } from '@qsr/utilities';
+import { TShirtSizes } from '@qsr/theme';
+
+interface DividerProps {
+  component?: React.ElementType;
+  orientation?: 'horizontal' | 'vertical';
+  gap?: TShirtSizes;
+}
+
+const Divider = ({
+  component = 'hr',
+  orientation = 'horizontal',
+  gap,
+}: DividerProps): JSX.Element => {
+  const As = orientation === 'vertical' ? 'div' : component;
+  return (
+    <As
+      className={clsx(
+        'border-solid border-divider',
+        orientation === 'horizontal'
+          ? 'border-t'
+          : 'border-l self-stretch inline-block h-full align-middle min-h-[.5rem]',
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
+        gap && marginClasses[orientation][gap]
+      )}
+    />
+  );
+};
+
+export { Divider };
+export type { DividerProps };
