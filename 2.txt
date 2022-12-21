@@ -10,10 +10,12 @@ interface DividerProps {
 
 const Divider = ({
   component = 'hr',
-  orientation = 'horizontal',
+  orientation = 'vertical',
   gap,
 }: DividerProps): JSX.Element => {
   const As = orientation === 'vertical' ? 'div' : component;
+  new line
+
   return (
     <As
       className={clsx(
